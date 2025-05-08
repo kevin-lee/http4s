@@ -935,12 +935,12 @@ lazy val scalafixInternalTests = project
   .settings(headerSources / excludeFilter := AllPassFilter)
   .disablePlugins(ScalafixPlugin)
   .dependsOn(scalafixInternalRules)
-  .settings(
-    dependencyOverrides ++= Seq(
-      "ch.epfl.scala" %% "scalafix-core" % V.scalafix,
-      "ch.epfl.scala" %% "scalafix-testkit" % V.scalafix % Test cross CrossVersion.full,
-    )
-  )
+//  .settings(
+//    dependencyOverrides ++= Seq(
+//      "ch.epfl.scala" %% "scalafix-core" % V.scalafix,
+//      "ch.epfl.scala" %% "scalafix-testkit" % V.scalafix % Test cross CrossVersion.full,
+//    )
+//  )
 
 def http4sProject(name: String) =
   Project(name, file(name))
